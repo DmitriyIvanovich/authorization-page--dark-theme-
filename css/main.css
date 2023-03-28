@@ -112,7 +112,7 @@ i {
     outline: 0;
 }
 .windowIn__field:focus + i,
-.windowIn__field:not(:empty)+i{
+.windowIn__field:valid+i{
     top:0.3rem;
     transform:translateY(0);
     line-height: 1.25rem;
