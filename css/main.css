@@ -1,0 +1,141 @@
+.body-wrapper {
+    position: relative;;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+.body-wrapper::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top:0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#000, rgba(0, 255, 0, 0.265), #000);
+    animation: bgcGo 5s linear infinite;
+}
+@keyframes bgcGo {
+    0%{
+        transform:translateY(-100%);
+    }
+    100%{
+        transform:translateY(100%);
+    }
+}
+
+.windowTitles{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    color: wheat;
+    z-index: 0;
+}
+.title{
+    display: block;
+    margin: 1.5px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--tile_color);
+    transition: 2s ease-out;
+}
+
+.title:hover{
+    background-color: var(--green);
+    transition: 0s ease-out;
+}
+
+
+
+
+
+
+
+
+.windowIn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    width: 25rem;
+    height: 25rem;
+    box-sizing: border-box;
+    background-color: #1D1D1D;
+    padding: 2.5rem 1.875rem;
+    z-index: 10;
+}
+
+.windowIn__header {
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: calibri;
+}
+
+.input_wrapper {
+    position: relative;
+}
+
+.windowIn__field {
+    display: block;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-top: 1.25rem;
+    margin-top: 1rem;
+    width: 100%;
+    height: 3rem;
+    background-color: var(--input_color);
+    border-radius: 0.2rem;
+    font-size: 1.125rem;
+    color: white;
+}
+.windowIn__field-name{
+    height: 3.7rem;
+}
+
+i {
+    position: absolute;
+    top:50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.125rem;
+    color: var(--placeholder_color);
+    font-weight: 300;
+    pointer-events: none;
+    transition: 0.3s ease-out;
+}
+
+.windowIn__field:focus {
+    outline: 0;
+}
+.windowIn__field:focus + i,
+.windowIn__field:not(:empty)+i{
+    top:0.3rem;
+    transform:translateY(0);
+    line-height: 1.25rem;
+    color:rgba(255, 255, 255, 0.734);
+    font-size: 0.8rem;
+}
+
+.windowIn__field::placeholder {
+    color: var(--placeholder_color);
+    font-weight: 300;
+}
+.windowIn__button-wrapper{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+.windowIn__link-singup{
+    color:var(--green)
+}
+.windowIn__submit{
+    background-color: var(--green);
+    height: 3rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}

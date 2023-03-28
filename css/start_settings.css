@@ -1,0 +1,22 @@
+﻿:root {
+    --green: #00ff00;
+    --tile_color: #090909;
+    --input_color: #2B2B2B;
+    --placeholder_color: #8f8f8f;;
+    font-size: 16px;
+}
+
+body,
+a,
+button {
+    color: white;
+    font-family: Calibri;
+}
+input {
+    border: 0;
+}
+
+.body-wrapper {
+    min-height: 100%;
+    overflow: hidden;
+}
