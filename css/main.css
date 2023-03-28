@@ -65,12 +65,13 @@
     background-color: #1D1D1D;
     padding: 2.5rem 1.875rem;
     z-index: 10;
-    transition: 0.5s box-shadow ease-in 1.3s;
+    transition: 0.5s box-shadow ease-in 0s;
 }
 .windowIn:hover{
     box-shadow: 37px 11px 237px -15px rgba(0, 255, 0, 0.46),
      5px 5px 29px 4px rgba(0, 255, 0, 0.81),
      inset 0px 0px 10px rgba(0, 255, 0, 0.38);
+     transition: 0.3s box-shadow ease-in 1.3s;
 }
 
 .windowIn__header {
