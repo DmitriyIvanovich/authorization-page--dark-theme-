@@ -1,31 +1,94 @@
+#modalWindow {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.004);
+    backdrop-filter: blur(2px);
+    z-index: 100;
+}
+
+.modalWindow__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5.5rem 1.875rem 2.5rem 1.875rem;
+    margin: auto auto;
+    width: 25rem;
+    height: 25rem;
+    box-sizing: border-box;
+    background-color: #080808;
+    box-shadow: 37px 11px 237px -15px rgba(0, 255, 0, 0.46),
+            5px 5px 29px 4px rgba(0, 255, 0, 0.81),
+            inset 0px 0px 10px rgba(0, 255, 0, 0.38);
+}
+
+.modalWindow__title {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    font-family: calibri;
+}
+
+.modalWindow__button {
+    display: block;
+    box-sizing: border-box;
+    margin-top: 1.5rem;
+    width: 100%;
+    line-height: 3rem;
+    background-color: rgb(27, 27, 27);
+    border-radius: 0.2rem;
+    font-size: 1.125rem;
+}
+.modalWindow__button:hover{
+    background-color: rgb(20, 20, 20);
+        
+}
+.modalWindow__button:active{
+        background-color: rgb(5, 5, 5);
+}
+.modalWindow__button.buttton-yes{
+    background-color: #0d0;
+    color:black;
+}
+.hidden{
+    display: none !important;
+}
+
 .body-wrapper {
-    position: relative;;
+    position: relative;
+    ;
     display: flex;
     height: 100vh;
     width: 100vw;
     background-color: black;
 }
-.body-wrapper::before{
+
+.body-wrapper::before {
     content: '';
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
     display: block;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(#000, rgba(0, 255, 0, 0.265), #000);
     animation: bgcGo 5s linear infinite;
 }
+
 @keyframes bgcGo {
-    0%{
-        transform:translateY(-100%);
+    0% {
+        transform: translateY(-100%);
     }
-    100%{
-        transform:translateY(100%);
+
+    100% {
+        transform: translateY(100%);
     }
 }
 
-.windowTitles{
+.windowTitles {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -33,7 +96,8 @@
     color: wheat;
     z-index: 0;
 }
-.title{
+
+.title {
     display: block;
     margin: 1.5px;
     width: 70px;
@@ -42,7 +106,7 @@
     transition: 2s ease-out;
 }
 
-.title:hover{
+.title:hover {
     background-color: var(--green);
     transition: 0s ease-out;
 }
@@ -67,11 +131,12 @@
     z-index: 10;
     transition: 0.5s box-shadow ease-in 0s;
 }
-.windowIn:hover{
+
+.windowIn:hover {
     box-shadow: 37px 11px 237px -15px rgba(0, 255, 0, 0.46),
-     5px 5px 29px 4px rgba(0, 255, 0, 0.81),
-     inset 0px 0px 10px rgba(0, 255, 0, 0.38);
-     transition: 0.3s box-shadow ease-in 1.3s;
+        5px 5px 29px 4px rgba(0, 255, 0, 0.81),
+        inset 0px 0px 10px rgba(0, 255, 0, 0.38);
+    transition: 0.3s box-shadow ease-in 1.3s;
 }
 
 .windowIn__header {
@@ -99,13 +164,14 @@
     font-size: 1.125rem;
     color: white;
 }
-.windowIn__field-name{
+
+.windowIn__field-name {
     height: 3.7rem;
 }
 
 i {
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 1rem;
     transform: translateY(-50%);
     font-size: 1.125rem;
@@ -118,12 +184,13 @@ i {
 .windowIn__field:focus {
     outline: 0;
 }
-.windowIn__field:focus + i,
-.windowIn__field:valid+i{
-    top:0.3rem;
-    transform:translateY(0);
+
+.windowIn__field:focus+i,
+.windowIn__field:valid+i {
+    top: 0.3rem;
+    transform: translateY(0);
     line-height: 1.25rem;
-    color:rgba(255, 255, 255, 0.734);
+    color: rgba(255, 255, 255, 0.734);
     font-size: 0.8rem;
 }
 
@@ -131,16 +198,19 @@ i {
     color: var(--placeholder_color);
     font-weight: 300;
 }
-.windowIn__button-wrapper{
+
+.windowIn__button-wrapper {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
 }
-.windowIn__link-singup{
-    color:var(--green)
+
+.windowIn__link-singup {
+    color: var(--green)
 }
-.windowIn__submit{
+
+.windowIn__submit {
     background-color: var(--green);
     height: 3rem;
     font-size: 1.4rem;
