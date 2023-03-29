@@ -41,6 +41,7 @@
     background-color: rgb(27, 27, 27);
     border-radius: 0.2rem;
     font-size: 1.125rem;
+    cursor: pointer;
 }
 .modalWindow__button:hover{
     background-color: rgb(20, 20, 20);
